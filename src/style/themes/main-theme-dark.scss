@@ -1,0 +1,63 @@
+@use "@angular/material" as mat;
+
+$main-palette: (
+  50: #f3e1e8,
+  100: #e2b5c8,
+  200: #d187a4,
+  300: #c05c82,
+  400: #b4406a,
+  500: #aa2a54,
+  600: #9b2850,
+  700: #87254a,
+  800: #722243,
+  900: #4d1d35,
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+
+$secondary-palette: (
+  50: #e2f2ed,
+  100: #b7dfd2,
+  200: #8bcbb6,
+  300: #62b69a,
+  400: #49a686,
+  500: #3a9575,
+  600: #358869,
+  700: #2f785b,
+  800: #28684e,
+  900: #1d4d35,
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+
+$main-primary: mat.define-palette($main-palette, 700, 500, 900);
+$main-accent: mat.define-palette($secondary-palette, 700, 500, 900);
+
+$main-theme-dark: mat.define-dark-theme(
+  (
+    color: (
+      primary: $main-primary,
+      accent: $main-accent,
+    ),
+  )
+);
